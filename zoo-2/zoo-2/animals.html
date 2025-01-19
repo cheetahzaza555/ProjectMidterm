@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Animal Models with Animations</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/supermedium/aframe-event-set-component@4.1.0/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <h1 style="text-align: center; color: white; font-family: Arial, sans-serif;">Reptiles</h1>
+
+      <!-- Cobra -->
+      <a-entity 
+        gltf-model="url(assets/Cobra.glb)" 
+        position="-4 1 -3" 
+        scale="0.05 0.05 0.05" 
+        rotation="0 -90 0"
+        event-set__click="animation__dance: property: position; to: -4 1.5 -3; dur: 500; loop: true; dir: alternate">
+        <a-text 
+          value="Cobra" 
+          position="0 1.5 0" 
+          align="center" 
+          color="yellow" 
+          scale="2 2 2">
+        </a-text>
+      </a-entity>
+
+      <!-- Crab -->
+      <a-entity 
+        gltf-model="url(assets/Crab.glb)" 
+        position="-3 1 -3" 
+        scale="0.02 0.02 0.02"
+        event-set__click="animation__dance: property: rotation; to: 0 360 0; dur: 1000; easing: easeInOutQuad; loop: true">
+        <a-text 
+          value="Crab" 
+          position="0 1.5 0" 
+          align="center" 
+          color="red" 
+          scale="2 2 2">
+        </a-text>
+      </a-entity>
+
+      <!-- Snail -->
+      <a-entity 
+        gltf-model="url(assets/Snail.glb)" 
+        position="-1 1.5 -3" 
+        scale="1 1 1"
+        animation="property: position; to: 1 1.5 -3; dur: 5000; loop: true; dir: alternate;"
+        event-set__click="animation__dance: property: scale; to: 1.2 1.2 1.2; dur: 500; loop: true; dir: alternate">
+        <a-text 
+          value="Snail" 
+          position="0 2.5 0" 
+          align="center" 
+          color="green" 
+          scale="2 2 2">
+        </a-text>
+      </a-entity>
+
+      <!-- Turtle -->
+      <a-entity 
+        gltf-model="url(assets/Turtle Character.glb)" 
+        position="1 0.5 -3" 
+        scale="0.5 0.5 0.5" 
+        rotation="0 -90 0"
+        event-set__click="animation__dance: property: rotation; to: 0 360 0; dur: 1500; loop: true">
+        <a-text 
+          value="Turtle" 
+          position="0 1.5 0" 
+          align="center" 
+          color="blue" 
+          scale="2 2 2">
+        </a-text>
+      </a-entity>
+
+      <!-- Gecko -->
+      <a-entity 
+        gltf-model="url(assets/Spotted Gecko.glb)" 
+        position="2 2 -3" 
+        scale="1 1 1"
+        event-set__click="animation__dance: property: position; to: 2 2.5 -3; dur: 500; loop: true; dir: alternate">
+        <a-text 
+          value="Gecko" 
+          position="0 2.5 0" 
+          align="center" 
+          color="purple" 
+          scale="2 2 2">
+        </a-text>
+      </a-entity>
+
+      <!-- Background -->
+      <a-entity 
+        gltf-model="url(assets/Forest Waterfall Vignette.glb)" 
+        position="-5 3 -2" 
+        scale="3 3 3" 
+        rotation="0 -80 0"></a-entity>
+        <a-sound 
+        src=".\sound\1 min Forest Sounds Soothing and Relaxing music for sleeping, stress relief, anxiety, focus, 432Hz [ ezmp3.cc ].mp3"
+        autoplay="true" 
+        loop="true" 
+        volume="0.1"
+        position="0 0 0">
+    </a-sound>
+      <a-sky src="./pic/6707.jpg"></a-sky>
+    </a-scene>
+  </body>
+</html>

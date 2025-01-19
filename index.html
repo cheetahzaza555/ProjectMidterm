@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room with 4 Doors</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene>
+
+        <a-sky color="#ffffff" src="model/tomas-cocacola-nJpk7nXEGSs-unsplash.jpg"></a-sky>
+        
+        <!-- ผนัง -->
+        <a-box position="0.0449 0.03132 0" depth="0.1" width="10" height="10" rotation="90 -90.00021045914971 0" color="#aaa" material="" geometry="" opacity="0.5"></a-box>
+
+        <a-text id="door-1-text" value="Welcome to your new world! Wishing you an exciting experience and lots of fun exploring! \n Make By 
+        \n Phurin Suwachat 663380181-3
+        \n Thaweepong Luangpathomchai 663380486-1
+        \n Atthanon Bunnoi 663380500-3
+        \n Krongkan Srimek 663380142-3" color="#000000" position="0.15602 3.5 -4.9" align="center" text=""></a-text>
+
+        <!-- ประตู 1 -->
+        <a-entity id="door-1" class="door" gltf-model="./model/door.glb" scale="0.5 0.5 0.5" position="-4 2.2 -4.9" cursor-listener="targetUrl: ProjectFish.html"></a-entity>
+
+        <a-text id="door-1-text" value="Under The Sea" color="#000000" position="-4.0584 4.25438 -4.9" text=""></a-text>
+
+        <!-- ประตู 2 -->
+        <a-entity id="door-2" class="door" gltf-model="./model/door.glb" scale="0.5 0.5 0.5" position="3.5 2.2 -4.9" cursor-listener="targetUrl: ./zoo-2/zoo-2/animals.html"></a-entity>
+
+        <a-text id="door-2-text" 
+        value="Reptiles" 
+        color="#000000" 
+        position="3.7 4.25438 -4.9"></a-text>
+
+        <!-- ประตู 3 -->
+        <a-entity id="door-3" class="door" gltf-model="./model/door.glb" scale="0.5 0.5 0.5" position="-4.5 1.8 4.9" cursor-listener="targetUrl: ./Dinosaur/Dinosaur/Dinosaur.html" rotation="-0.028074931961410338 -179.96776232397698 -179.35584339877724"></a-entity>
+
+        <a-text id="door-3-text" value="Dinosaur" color="#000000" rotation="-0.09339212060632418 -179.7213904720707 -0.9860603654201467" position="-3.47292 4.22817 4.9" text=""></a-text>
+
+        <!-- ประตู 4 -->
+        <a-entity id="door-3" class="door" gltf-model="./model/door.glb" scale="0.5 0.5 0.5" position="3.5 1.8 4.9" cursor-listener="targetUrl:./midtermproj\midtermproj\Bird.html" rotation="-0.028074931961410338 -179.96776232397698 -179.35584339877724"></a-entity>
+
+        <a-text id="door-4-text" value="Birds" color="#000000" rotation="0 180 0" position="4.5 4.42861 4.9" text=""></a-text>
+
+        <!-- กล้อง -->
+        <a-camera id="camera" position="0 1.6 0" wasd-controls="enabled: true" cursor="fuse: true; fuseTimeout: 500;">
+            <a-cursor color="#ffffff"></a-cursor>
+        </a-camera>
+
+        <!-- แสง -->
+        <a-entity light="color: #BBB; type: ambient"></a-entity>
+        <a-entity light="intensity: 0.6; castShadow: true" position="-0.5 1 1"></a-entity>
+
+        <a-sound 
+      src="model/SPD - สวัสดีค้าบ【SAWAS D KAB】_ OFFICIAL MV [ ezmp3.cc ].mp3"
+      autoplay="true" 
+      loop="true" 
+      volume="0.1"
+      position="0 0 0">
+  </a-sound>
+
+    </a-scene>
+
+    <script>
+        AFRAME.registerComponent('cursor-listener', {
+    schema: {
+        targetUrl: { type: 'string' }
+    },
+    init: function () {
+        const el = this.el;
+        el.addEventListener('click', () => {
+            // เปลี่ยนหน้าเมื่อคลิกที่ประตู
+            window.location.href = this.data.targetUrl;
+        });
+    }
+});
+    </script>
+</body>
+</html>

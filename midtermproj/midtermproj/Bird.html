@@ -1,0 +1,562 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ngokevin/aframe-look-at-component/dist/aframe-look-at-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="#ECECEC" src="panoramic-sea.jpg"></a-sky>
+
+      <a-camera id="camera" position="-4.9 1 9.7">
+        <a-cursor 
+          color="white" 
+          fuse="true" 
+          fuse-timeout="500" 
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: white; shader: flat">
+        </a-cursor>
+      </a-camera>
+
+    
+      <a-assets>
+        <audio id="parrot-sound" src="parrot-sound.mp3"></audio>
+        <audio id="sparrow-sound" src="sparrow-sound.mp3"></audio>
+        <audio id="seagull-sound" src="seagull-sound.mp3"></audio>
+        <audio id="hummingbird-sound" src="hummingbird-sound.mp3"></audio>
+        <audio id="chicken-sound" src="chicken-sound.mp3"></audio>
+        <audio id="crow-sound" src="crow-sound.mp3"></audio>
+        <audio id="background-music" src="Lofi-Type-Beat-Rain.mp3"></audio>
+      </a-assets>
+
+      <a-sound 
+      src="#background-music"
+      autoplay="true" 
+      loop="true" 
+      volume="0.3"
+      position="0 0 0">
+  </a-sound>
+
+      <!-- Grass Platform -->
+      <a-entity gltf-model="Grass Platform.glb" animation-mixer="clip:*" scale="80 3 70" position="-4.21 -0.059 -4.00"></a-entity>
+
+      <!-- Gold Rocks -->
+      <a-entity gltf-model="Gold Rocks.glb" animation-mixer="clip:*" scale="20 20 20" position="2 0 -4.1"></a-entity>
+      <a-entity gltf-model="Gold Rocks.glb" animation-mixer="clip:*" scale="20 20 20" position="-17-4 0 -4.1"></a-entity>
+
+      <!-- Trees -->
+      <a-entity gltf-model="Tree.glb" animation-mixer="clip:*" scale="2 2 2" position="1.4 3.1 -6.8"></a-entity>
+      <a-entity gltf-model="Tree.glb" animation-mixer="clip:*" scale="2 2 2" position="-7.18 3.1 -13.65"></a-entity>
+      <a-entity gltf-model="Tree.glb" animation-mixer="clip:*" scale="2 2 2" position="-9 3.1 -4"></a-entity>
+      <a-entity gltf-model="Tree.glb" animation-mixer="" scale="4 4 4" position="-0.01027 5.65697 7.82496" rotation="0 23.890000000000004 0"></a-entity>
+      <a-entity gltf-model="Big Tree.glb" animation-mixer="" scale="6 6 6" position="-12.61206 8.29716 1.47476" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="Big Tree.glb" animation-mixer="" scale="6 6 6" position="3.61389 8.297 -14.42027" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="Tree.glb" animation-mixer="" scale="2 2 2" position="-11.33036 3.07249 8.58501" rotation="0 45 0"></a-entity>
+      
+      
+
+      <!-- Parrot -->
+      <a-entity 
+        id="parrot" 
+        gltf-model="Parrot.glb" 
+        animation-mixer="clip:*" 
+        scale="0.01 0.01 0.01" 
+        position="-7.65 1.124 -2"
+        rotation="0 90 0"
+        sound="src: #parrot-sound; autoplay: false; volume: 1">
+        
+      </a-entity>
+      <a-text 
+        id="parrot-text" 
+        value="A parrot is a colorful bird known for its ability to mimic sounds. It has bright feathers, usually green, red, or blue. Parrots live in tropical areas and eat fruits, seeds, and nuts. They are intelligent and can be trained to repeat words." 
+        color="white" 
+        align="center" 
+        position="-7.65 2 -2" 
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera> 
+      </a-text>
+      <a-text 
+      id="parrot-sound-text" 
+      value="Click to play Sound" 
+      color="white" 
+      align="center" 
+      position="-7.65 2.5 -2" 
+      scale="0.4 0.3 0.4" 
+      visible="false" 
+      look-at-camera>
+      </a-text>
+
+      <!-- Sparrow -->
+      <a-entity 
+        id="sparrow" 
+        gltf-model="Sparrow.glb" 
+        animation-mixer="clip:*" 
+        scale="0.015 0.015 0.015" 
+        position="-7.65 1 0"
+        rotation="0 90 0"
+        sound="src: #sparrow-sound; autoplay: false; volume: 1">
+      </a-entity>
+      <a-text 
+        id="sparrow-text" 
+        value="A sparrow is a small, brown bird found in many places. It eats seeds and insects and is often seen in groups. Sparrows are social and make cheerful sounds.
+" 
+        color="white" 
+        align="center" 
+        position="-7.65 2.0 0" 
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera>  
+        </a-text>
+        <a-text 
+          id="sparrow-sound-text" 
+          value="Click to play Sound" 
+          color="white" 
+          align="center" 
+          position="-7.65 2.5 0" 
+          scale="0.4 0.3 0.4" 
+          visible="false" 
+          look-at-camera>
+        </a-text>
+
+      <!-- Seagull -->
+      <a-entity 
+        id="seagull" 
+        gltf-model="Seagull.glb" 
+        animation-mixer="clip:*" 
+        scale="0.015 0.015 0.015" 
+        position="-7.65 1.05 2"
+        rotation="0 90 0"
+        sound="src: #seagull-sound; autoplay: false; volume: 1">
+      </a-entity>
+      <a-text 
+        id="seagull-text" 
+        value="A seagull is a bird that lives near the sea. It has white feathers with gray or black marks. Seagulls are scavengers, eating fish and scraps. They fly well and are often seen at beaches and harbors." 
+        color="white" 
+        align="center" 
+        position="-7.65 2 2"  
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera>  
+      </a-text>
+      <a-text 
+          id="seagull-sound-text" 
+          value="Click to play Sound" 
+          color="white" 
+          align="center" 
+          position="-7.65 2.5 2" 
+          scale="0.4 0.3 0.4" 
+          visible="false" 
+          look-at-camera>
+        </a-text>
+
+      <a-entity 
+        id="hummingbird" 
+        gltf-model="Hummingbird.glb" 
+        animation-mixer="" 
+        scale="0.007 0.007 0.007" 
+        position="-7.65 1.05 -4" 
+        rotation="0 90 0"
+        sound="src: #hummingbird-sound; autoplay: false; volume: 1">
+      </a-entity>
+      <a-text 
+        id="hummingbird-text" 
+        value="A hummingbird is the smallest of all birds. They can fly forwards, backwards, and hover in place. They drink nectar from flowers using their long beaks and make a humming sound with their wings." 
+        color="white" 
+        align="center" 
+        position="-7.65 2 -4" 
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera>
+      </a-text>
+      <a-text 
+          id="hummingbird-sound-text" 
+          value="Click to play Sound" 
+          color="white" 
+          align="center" 
+          position="-7.65 2.5 -4" 
+          scale="0.4 0.3 0.4" 
+          visible="false" 
+          look-at-camera>
+        </a-text>
+
+      <a-entity 
+        id="chicken" 
+        gltf-model="Chicken.glb" 
+        animation-mixer="" 
+        scale="0.004 0.004 0.004" 
+        position="-7.65 0.59579 -6" 
+        rotation="0 180 0"
+        sound="src: #chicken-sound; autoplay: false; volume: 1">
+      </a-entity>
+      <a-text 
+        id="chicken-text" 
+        value="A chicken is a domesticated bird kept by humans for eggs and meat. They have colorful feathers, a red comb on their head, and make clucking sounds. They are social birds that live in groups." 
+        color="white" 
+        align="center" 
+        position="-7.65 2 -6" 
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera>
+      </a-text>
+      <a-text 
+          id="chicken-sound-text" 
+          value="Click to play Sound" 
+          color="white" 
+          align="center" 
+          position="-7.65 2.5 -6" 
+          scale="0.4 0.3 0.4" 
+          visible="false" 
+          look-at-camera>
+        </a-text>
+
+      <a-entity 
+        id="crow" 
+        gltf-model="Crow.glb" 
+        animation-mixer="" 
+        scale="0.01 0.01 0.01" 
+        position="-7.65 0.86183 -8" 
+        rotation="0 90 0"
+        sound="src: #crow-sound; autoplay: false; volume: 1">
+      </a-entity>
+      <a-text 
+        id="crow-text" 
+        value="A crow is a highly intelligent black bird. They are known for problem-solving abilities and can use tools. Crows live in many places around the world and have a distinctive cawing sound." 
+        color="white" 
+        align="center" 
+        position="-7.65 2 -8" 
+        scale="0.4 0.3 0.4" 
+        visible="false" 
+        look-at-camera>
+      </a-text>
+      <a-text 
+          id="crow-sound-text" 
+          value="Click to play Sound" 
+          color="white" 
+          align="center" 
+          position="-7.65 2.5 -8" 
+          scale="0.4 0.3 0.4" 
+          visible="false" 
+          look-at-camera>
+        </a-text>
+
+      <!-- Path and Pipe -->
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.93 0.592 8.512">
+      </a-entity>
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.88 0.592 4.851">
+      </a-entity>
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.88 0.592 1.149">
+      </a-entity>
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.88 0.592 -2.550">
+      </a-entity>
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.88 0.592 -6.268">
+      </a-entity>
+      <a-entity 
+        id="path" 
+        gltf-model="Stone Walkway.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="-4.88 0.592 -9.952">
+      </a-entity>
+      <a-entity 
+        id="Pipe" 
+        gltf-model="Pipe.glb" 
+        animation-mixer="clip:*" 
+        scale="2 2 2" 
+        position="0.424 0.592 -10.54">
+      </a-entity>
+      <a-entity 
+        id="Pipe" 
+        gltf-model="Fence.glb" 
+        animation-mixer="clip:*" 
+        scale="1 1 1" 
+        position="-7.21 0.595 7.003"
+        rotation="0 90 0">
+      </a-entity>
+      <a-entity 
+        id="Fence" 
+        gltf-model="Fence.glb" 
+        animation-mixer="clip:*" 
+        scale="1 1 1" 
+        position="-2.54 0.595 3.301"
+        rotation="0 90 0">
+      </a-entity>
+      <a-entity id="House" gltf-model="House.glb" animation-mixer="" scale="5 5 5" position="2.54341 0.595 4.27123" rotation="0 90 0">
+        <a-entity id="Hut" gltf-model="Hut.glb" animation-mixer="" scale="" position="3.11421 -0.01952 -2.61411" rotation="0 160.03 0">
+        </a-entity>
+      </a-entity>
+      <a-entity id="path-2" gltf-model="Stone Walkway.glb" animation-mixer="" scale="2 2 2" position="-4.88 0.592 -13.63965">
+      </a-entity>
+      <a-entity gltf-model="Grass Platform.glb" animation-mixer="" scale="80 3 70" position="-4.21 -0.059 -4"></a-entity>
+      <a-entity id="path" gltf-model="Stone Walkway.glb" animation-mixer="" scale="2 2 2" position="-4.93 0.592 12.20697">
+      </a-entity>
+      <a-entity id="Fence-2" gltf-model="Fence.glb" animation-mixer="" scale="" position="-2.54 0.595 -1.65171" rotation="0 90 0">
+      </a-entity>
+      <a-entity id="Pipe-2" gltf-model="Fence.glb" animation-mixer="" scale="" position="-7.21 0.595 -10.81126" rotation="0 90 0">
+      </a-entity>
+      <a-entity id="Well-2" gltf-model="Well.glb" animation-mixer="" scale="2 2 2" position="-9.091 1.04436 -6.712" rotation="0 135 0">
+      </a-entity>
+      <a-entity id="path-3" gltf-model="Stone Walkway.glb" animation-mixer="" scale="2 2 2" position="-4.88 0.592 -17.35547">
+      </a-entity>
+      <a-entity id="path-4" gltf-model="Stone Walkway.glb" animation-mixer="" scale="2 2 2" position="-4.88 0.592 -21.04557">
+      </a-entity>
+      <a-entity id="path-4" gltf-model="Stone Walkway.glb" animation-mixer="" scale="2 2 2" position="-4.88 0.592 -21.04557">
+      </a-entity>
+      <a-entity id="Fence-3" gltf-model="Fence.glb" animation-mixer="" scale="" position="-2.54 0.595 -9.61594" rotation="0 90 0">
+      </a-entity>
+      <a-entity id="Fence-4" gltf-model="Fence.glb" animation-mixer="" scale="" position="-2.54 0.595 -12.77548" rotation="0 90 0">
+      </a-entity>
+      <a-entity id="Fence-5" gltf-model="Fence.glb" animation-mixer="" scale="" position="-2.54 0.595 -15.89198" rotation="0 90 0">
+      </a-entity>
+      <a-entity gltf-model="Gold Rocks.glb" animation-mixer="" scale="20 20 20" position="-20.02245 0.27738 3.60491"></a-entity>
+      <a-entity gltf-model="Gold Rocks.glb" animation-mixer="" scale="20 20 20" position="9.99478 0.277 4.08262"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-1.224 0.56206 16.156"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="2.7657 0.56206 16.156"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="6.20815 0.562 14.73822" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="9.07196 0.562 11.89269" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="11.91056 0.57341 9.07454" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="17.73587 0.57341 3.11281" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="19.18849 0.57341 -0.29243" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="17.97113 0.57341 -8.18861" rotation="0 110 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="18.90687 0.57341 -4.32733" rotation="0 97.53 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="16.58411 0.57341 -11.98841" rotation="0 110 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="15.1907 0.57341 -15.77521" rotation="0 110 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="12.61576 0.573 -18.33841" rotation="0 -20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="8.83842 0.573 -19.70358" rotation="0 -20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="5.05723 0.573 -21.08911" rotation="0 -20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="1.29644 0.573 -22.46399" rotation="0 -20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-2.45689 0.573 -23.81894" rotation="0 -20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-6.21641 0.573 -23.82071" rotation="0 20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-9.98793 0.573 -22.43553" rotation="0 20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-13.76672 0.573 -21.06245" rotation="0 20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-17.54937 0.573 -19.67112" rotation="0 20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-21.3243 0.573 -18.31628" rotation="0 20 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-23.92791 0.573 -15.7414" rotation="0 70 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-25.31131 0.573 -11.96349" rotation="0 70 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-26.69783 0.573 -8.17088" rotation="0 70 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-27.39247 0.56434 -4.30862" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-27.39247 0.56434 -0.29228" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-26.21774 0.56434 3.36648" rotation="0 -55.93 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-23.95527 0.56434 6.72096" rotation="0 -55.93 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-21.27949 0.56434 9.65707" rotation="0 -40 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-18.21706 0.56434 12.23553" rotation="0 -40 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-15.09785 0.56434 14.82615" rotation="0 -40 0"></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-11.56496 0.56434 16.0967" rotation=""></a-entity>
+      <a-entity gltf-model="Fence2.glb" animation-mixer="" scale="0.7 0.7 0.7" position="-7.56219 0.56434 16.09744" rotation=""></a-entity>
+      
+
+
+
+
+
+
+
+
+    </a-scene>
+    <script>
+      // Register look-at-camera component
+      AFRAME.registerComponent('look-at-camera', {
+        tick: function () {
+          const camera = document.querySelector('#camera');
+          if (camera) {
+            this.el.object3D.lookAt(camera.object3D.position);
+          }
+        }
+      });
+
+      // Function to show description when hovering over entities
+      
+
+      const rotationSpeed = 2000;  // Speed of rotation
+
+      // Parrot Animation
+      const parrotEntity = document.querySelector("#parrot");
+      const parrotText = document.querySelector("#parrot-text");
+      parrotEntity.addEventListener("mouseenter", () => {
+        parrotText.setAttribute("visible", "true");
+        parrotEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 360 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      parrotEntity.addEventListener("mouseleave", () => {
+        parrotText.setAttribute("visible", "false");
+        parrotEntity.removeAttribute("animation");
+        parrotEntity.setAttribute("rotation", "0 90 0");  // Reset to original position
+      });
+
+      // Sparrow Animation
+      const sparrowEntity = document.querySelector("#sparrow");
+      const sparrowText = document.querySelector("#sparrow-text");
+      sparrowEntity.addEventListener("mouseenter", () => {
+        sparrowText.setAttribute("visible", "true");
+        sparrowEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 360 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      sparrowEntity.addEventListener("mouseleave", () => {
+        sparrowText.setAttribute("visible", "false");
+        sparrowEntity.removeAttribute("animation");
+        sparrowEntity.setAttribute("rotation", "0 90 0");  // Reset to original position
+      });
+
+      // Seagull Animation
+      const seagullEntity = document.querySelector("#seagull");
+      const seagullText = document.querySelector("#seagull-text");
+      seagullEntity.addEventListener("mouseenter", () => {
+        seagullText.setAttribute("visible", "true");
+        seagullEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 360 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      seagullEntity.addEventListener("mouseleave", () => {
+        seagullText.setAttribute("visible", "false");
+        seagullEntity.removeAttribute("animation");
+        seagullEntity.setAttribute("rotation", "0 90 0");  // Reset to original position
+      });
+      const hummingbirdEntity = document.querySelector("#hummingbird");
+      const hummingbirdText = document.querySelector("#hummingbird-text");
+      hummingbirdEntity.addEventListener("mouseenter", () => {
+        hummingbirdText.setAttribute("visible", "true");
+        hummingbirdEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 360 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      hummingbirdEntity.addEventListener("mouseleave", () => {
+        hummingbirdText.setAttribute("visible", "false");
+        hummingbirdEntity.removeAttribute("animation");
+        hummingbirdEntity.setAttribute("rotation", "0 90 0");
+      });
+
+      // Chicken Animation
+      const chickenEntity = document.querySelector("#chicken");
+      const chickenText = document.querySelector("#chicken-text");
+      chickenEntity.addEventListener("mouseenter", () => {
+        chickenText.setAttribute("visible", "true");
+        chickenEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 540 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      chickenEntity.addEventListener("mouseleave", () => {
+        chickenText.setAttribute("visible", "false");
+        chickenEntity.removeAttribute("animation");
+        chickenEntity.setAttribute("rotation", "0 180 0");
+      });
+
+      // Crow Animation
+      const crowEntity = document.querySelector("#crow");
+      const crowText = document.querySelector("#crow-text");
+      crowEntity.addEventListener("mouseenter", () => {
+        crowText.setAttribute("visible", "true");
+        crowEntity.setAttribute("animation", {
+          property: "rotation",
+          to: "0 360 0",
+          loop: true,
+          dur: rotationSpeed,
+        });
+      });
+      crowEntity.addEventListener("mouseleave", () => {
+        crowText.setAttribute("visible", "false");
+        crowEntity.removeAttribute("animation");
+        crowEntity.setAttribute("rotation", "0 90 0");
+      });
+
+
+
+      function setupHoverEffect(entityId, textId) {
+  const entity = document.querySelector(entityId);
+  const text = document.querySelector(textId);
+  const soundText = document.querySelector(`${entityId}-sound-text`);
+  
+  entity.addEventListener('mouseenter', () => {
+    text.setAttribute('visible', 'true');
+    soundText.setAttribute('visible', 'true');
+    entity.setAttribute("animation", {
+      property: "rotation",
+      from: entityId === "#chicken" ? "0 180 0" : "0 90 0",
+      to: entityId === "#chicken" ? "0 540 0" : "0 450 0",
+      loop: true,
+      dur: rotationSpeed,
+    });
+  });
+  
+  entity.addEventListener('mouseleave', () => {
+    text.setAttribute('visible', 'false');
+    soundText.setAttribute('visible', 'false');
+    entity.removeAttribute("animation");
+    entity.setAttribute("rotation", entityId === "#chicken" ? "0 180 0" : "0 90 0");
+  });
+}
+
+function setupSoundOnClick(entityId) {
+  const entity = document.querySelector(entityId);
+  let isPlaying = false;
+
+  // Remove any existing click listeners
+  entity.removeEventListener('click', null);
+  
+  entity.addEventListener('click', () => {
+    const sound = entity.components.sound;
+    if (!isPlaying) {
+      sound.playSound();
+      isPlaying = true;
+    } else {
+      sound.stopSound();
+      isPlaying = false;
+    }
+  });
+
+  // Reset isPlaying when sound ends
+  entity.addEventListener('sound-ended', () => {
+    isPlaying = false;
+  });
+}
+const birds = ['parrot', 'sparrow', 'seagull', 'hummingbird', 'chicken', 'crow'];
+      
+birds.forEach(bird => {
+  setupHoverEffect(`#${bird}`, `#${bird}-text`);
+  setupSoundOnClick(`#${bird}`);
+});
+
+    </script>
+  </body>
+</html>

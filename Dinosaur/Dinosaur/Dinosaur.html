@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <title>โมเดล 3 มิติของไดโนเสาร์</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- ระบบ Cursor -->
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <!-- หัวข้อ -->
+      <a-text value="Dinosur" position="0 2 -4" color="white" scale="6 6 6"
+        align="center"
+        font="https://cdn.aframe.io/fonts/mozillasmall.fnt"></a-text>
+
+      <!-- โมเดลสัตว์ที่ตอบโต้ได้ -->
+      <a-entity
+        gltf-model="url(model/Apatosaurus.glb)"
+        position="-12 -0.7 -10"
+        scale="0.3 0.3 0.3"
+        rotation="0 40 0"
+        class="clickable"
+        animation__dance1="property: position; to: -12 -0.5 -10; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.4 0.4 0.4"
+        event-set__mouseleave="scale: 0.3 0.3 0.3">
+        <a-text value="Apatosaurus" position="-3 2 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/Parasaurolophus.glb)"
+        position="-3.224 -0.4 -10"
+        scale="0.2 0.2 0.2"
+        rotation="0 10 0"
+        class="clickable"
+        animation__dance1="property: position; to: -3.224 -0.2 -10; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.3 0.3 0.3"
+        event-set__mouseleave="scale: 0.2 0.2 0.2">
+        <a-text value="Parasaurolophus" position="0 6 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/Stegosaurus.glb)"
+        position="3 -0.5 -4"
+        scale="0.3 0.3 0.3"
+        rotation="0 -20 0"
+        class="clickable"
+        animation__dance1="property: position; to: 3 -0.3 -4; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.4 0.4 0.4"
+        event-set__mouseleave="scale: 0.3 0.3 0.3">
+        <a-text value="Stegosaurus" position="4 1 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/T-Rex.glb)"
+        position="5 -0.5 -1"
+        scale="0.1 0.1 0.1"
+        rotation="0 -20 0"
+        class="clickable"
+        animation__dance1="property: position; to: 5 -0.3 -1; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.15 0.15 0.15"
+        event-set__mouseleave="scale: 0.1 0.1 0.1">
+        <a-text value="T-Rex" position="0 2 0" scale="5 5 5" align="center"
+          color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/Velociraptor.glb)"
+        position="-1 -0.5 1"
+        scale="0.2 0.2 0.2"
+        rotation="0 0 0"
+        class="clickable"
+        animation__dance1="property: position; to: -1 -0.3 1; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.25 0.25 0.25"
+        event-set__mouseleave="scale: 0.2 0.2 0.2">
+        <a-text value="Velociraptor" position="-3 1 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/Triceratops.glb)"
+        position="-12 -0.5 2"
+        scale="0.2 0.2 0.2"
+        rotation="0 80 0"
+        class="clickable"
+        animation__dance1="property: position; to: -12 -0.3 2; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.25 0.25 0.25"
+        event-set__mouseleave="scale: 0.2 0.2 0.2">
+        <a-text value="Triceratops" position="-4 1 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(model/Pterablocktyls.glb)"
+        position="2 5 -10"
+        scale="0.5 0.5 0.5"
+        rotation="0 -10 0"
+        class="clickable"
+        animation__dance1="property: position; to: 2 5.2 -10; dur: 500; dir: alternate; loop: 2; startEvents: click"
+        animation__dance2="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: 1; startEvents: click"
+        event-set__mouseenter="scale: 0.6 0.6 0.6"
+        event-set__mouseleave="scale: 0.5 0.5 0.5">
+        <a-text value="Pterablocktyls" position="5 1 0" scale="2 2 2"
+          align="center" color="yellow" visible="false" class="label"></a-text>
+      </a-entity>
+
+      <!-- ธรรมชาติ -->
+      <a-entity
+        gltf-model="url(model/Nature.glb)"
+        position="-6 0 -3"
+        scale="10 10 10"
+        rotation="0 60 0">
+      </a-entity>
+
+      <!-- ฉาก -->
+      <a-sky src="./img/6707.jpg"></a-sky>
+      <a-sound 
+        src="./sound/1 min Forest Sounds Soothing and Relaxing music for sleeping, stress relief, anxiety, focus, 432Hz [ ezmp3.cc ].mp3"
+        autoplay="true" 
+        loop="true" 
+        volume="0.1"
+        position="0 0 0">
+    </a-sound>
+
+    </a-scene>
+
+    <script>
+      // เพิ่มเสียงเมื่อคลิก
+      document.querySelectorAll('.clickable').forEach(entity => {
+        entity.addEventListener('click', () => {
+          const sound = document.createElement('a-sound');
+          sound.setAttribute('src', 'url(model/roar.mp3)');
+          sound.setAttribute('autoplay', 'true');
+          entity.appendChild(sound);
+        });
+
+        // แสดงชื่อเมื่อเมาส์ชี้
+        entity.addEventListener('mouseenter', () => {
+          const label = entity.querySelector('.label');
+          if (label) label.setAttribute('visible', 'true');
+        });
+
+        entity.addEventListener('mouseleave', () => {
+          const label = entity.querySelector('.label');
+          if (label) label.setAttribute('visible', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>

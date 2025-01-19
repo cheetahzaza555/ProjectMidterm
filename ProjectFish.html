@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underwater Zoo</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene>
+
+        <a-sky color="#0077be"></a-sky>
+
+        <a-entity id="ocean" 
+                  gltf-model="model/ocean.glb"
+                   
+                  scale="1 1 1" 
+                  position="2 -100 -5"></a-entity>
+
+        <a-entity id="bg-" 
+                  gltf-model="model/Underthesea.glb" 
+                  scale="10 10 10" 
+                  position="-1 -1 -20"
+                  rotation="0 180 0"></a-entity>
+
+        <a-entity id="bg-sign" 
+                gltf-model="model/Wooden Sign.glb" 
+                scale="5 5 5" 
+                position="3.92565 -4.86145 -16.48032" 
+                rotation="0 179.9998479605043 -8.3239308476606"></a-entity>
+
+        <a-text value="Welcome to the \n Underwater " 
+                color="#ffffff" 
+                position="2.93 1.5 -15.48" 
+                rotation="0 0 0" 
+                align="center" 
+                scale="4 4 4"></a-text>
+
+                <a-entity id="bg" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="2.52684 -4.861 -1.61081" rotation=""></a-entity>
+
+                <a-entity id="bg-2" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="10.09123 -4.92706 -1.82662" rotation=""></a-entity>
+        
+                <a-entity id="bg-3" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-5.10872 -4.861 -1.611" rotation=""></a-entity>
+
+                <a-entity id="bg-4" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-12.30147 -4.861 -1.611" rotation=""></a-entity>
+
+                <a-entity id="bg-5" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-19.57709 -4.861 -1.611" rotation=""></a-entity>
+                
+                <a-entity id="bg-6" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="17.52828 -4.927 -1.827" rotation=""></a-entity>
+
+                <a-entity id="bg-7" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-18.11754 -4.861 -10.23262" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-8" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="16.33881 -4.927 -10.50267" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-9" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="6.5537 -4.927 -10.503" rotation="0 90 0"></a-entity>
+                
+                <a-entity id="bg-fence" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="0.62589 -4.62267 3.45175" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="5.56081 -4.62267 3.45175" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="10.49193 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-4.27071 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-9.20239 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-4" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-14.11288 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-5" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="15.40487 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-6" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-20.07929 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-7" gltf-model="model/Fence.glb" scale="1.5 2.5 2.5" position="19.49296 -4.623 3.452" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="21.31102 -4.63515 0.60765" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="21.31102 -4.63515 -4.32" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-9" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-23.68694 -4.623 -0.36642" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-10" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-23.687 -4.623 -7.27903" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-11" gltf-model="model/Fence.glb" scale="3 2.5 2.5" position="21.31102 -4.63515 -9.77249" rotation="0 270 0"></a-entity>
+
+                <a-entity id="button-1" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="-10.262 -4.109 -1.231" camera-collision="targetPosition: -50 -2 -57"></a-entity>
+<a-text id="button-1-text" 
+        value="Go to fish" 
+        color="#ffffff" 
+        position="-10.262 -1 -1.23105"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+                <a-entity id="button-2" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="0.00827 -4.109 -1.231" camera-collision="targetPosition: 0 -2 -57"></a-entity>
+                <a-text id="button-2-text" 
+                value="Go to shellfish and octopus" 
+                color="#ffffff" 
+                position="0.00827 -1 -1.231"
+                align="center" 
+                visible="false" 
+                look-at-camera></a-text>
+
+                <a-entity id="button-3" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="10.02643 -4.109 -1.231" camera-collision="targetPosition: 50 -2 -57"></a-entity>
+                <a-text id="button-3-text" 
+                value="Go to shrimp and crab"
+                color="#ffffff" 
+                position="10.02643 -1 -1.231"
+                align="center" 
+                visible="false" 
+                look-at-camera></a-text>
+
+
+        <!-- Fish Zone -->      
+        <a-entity id="bg-" 
+        gltf-model="model/Underthesea.glb" 
+        scale="10 10 10" 
+        position="-51 -1 -70"
+        rotation="0 180 0"></a-entity>
+
+<a-entity id="bg-sign" 
+      gltf-model="model/Wooden Sign.glb" 
+      scale="5 5 5" 
+      position="-46.07435 -4.86145 -66.48032" 
+      rotation="0 179.9998479605043 -8.3239308476606"></a-entity>
+
+<a-text value="Welcome to the \n Fish Zone" 
+      color="#ffffff" 
+      position="-47.07 1.5 -65.48" 
+      rotation="0 0 0" 
+      align="center" 
+      scale="4 4 4"></a-text>
+
+      <a-entity id="bg" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-47.47316 -4.861 -51.61081" rotation=""></a-entity>
+
+      <a-entity id="bg-2" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-39.90877 -4.92706 -51.82662" rotation=""></a-entity>
+
+      <a-entity id="bg-3" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-55.10872 -4.861 -51.611" rotation=""></a-entity>
+
+      <a-entity id="bg-4" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-62.30147 -4.861 -51.611" rotation=""></a-entity>
+
+      <a-entity id="bg-5" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-69.57709 -4.861 -51.611" rotation=""></a-entity>
+      
+      <a-entity id="bg-6" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-32.47172 -4.927 -51.827" rotation=""></a-entity>
+
+      <a-entity id="bg-7" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-68.11754 -4.861 -60.23262" rotation="0 90 0"></a-entity>
+
+      <a-entity id="bg-8" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-33.66119 -4.927 -60.50267" rotation="0 90 0"></a-entity>
+
+      <a-entity id="bg-9" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-43.4463 -4.927 -60.503" rotation="0 90 0"></a-entity>
+      
+      <a-entity id="bg-fence" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-50.62589 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+      <a-entity id="bg-fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-45.56081 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-40.49193 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="bg-fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-54.27071 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-59.20239 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-4" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-64.11288 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-5" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-35.58349 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-6" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-70.07929 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-7" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-30.67405 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+      <a-entity id="fence-12" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-28.689 -4.635 -54.38746" rotation="0 270 0"></a-entity>
+
+      <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-28.68898 -4.63515 -49.42462" rotation="0 270 0"></a-entity>
+
+      <a-entity id="fence-9" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-73.68694 -4.623 -50.36642" rotation="0 90 0"></a-entity>
+
+      <a-entity id="fence-10" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-73.687 -4.623 -57.27903" rotation="0 90 0"></a-entity>
+
+      <a-entity id="fence-11" gltf-model="model/Fence.glb" scale="3 2.5 2.5" position="-28.68898 -4.63515 -59.77249" rotation="0 270 0"></a-entity>
+
+      <a-entity id="button-home" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="-50.00827 -4.109 -51.231" camera-collision="targetPosition: 0 -2 -6"></a-entity>
+        <a-text id="button-home-text" 
+        value="Go to Welcome" 
+        color="#ffffff" 
+        position="-50.00827 -1 -51.231"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่1 -->
+
+        <a-entity id="floor-1" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-30.957 -4.38489 -59.172" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-1" gltf-model="model/Fish.glb" scale="0.5 0.5 0.5" position="-30.957 -3.38489 -59.172" rotation="0 0 0"></a-entity>
+        <a-text id="fish-1-text" 
+        value="Clownfish are small bony fish that live in the sea. Classified in the subfamily Amphiprioninae In the gourami family (Pomacentridae)" 
+        color="#ffffff" 
+        position="-30.957 -1.38489 -59.172"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่2 -->
+
+        <a-entity id="floor-2" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-30.957 -4.385 -53.9787" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-2" gltf-model="model/Blowfish.glb" scale="0.2 0.2 0.2" position="-30.957 -3.98489 -53.9787" rotation=""></a-entity>
+        <a-text id="fish-2-text" 
+        value="puffer fish (English: Puffers, Sunfishes, Triggerfishes, Filefishes) is the name given to fish in the order. Tetraodontiformes There are many species, many families, many genera, living in the sea, brackish water, and fresh water. Most of them have round bodies. small fins and tail" 
+        color="#ffffff" 
+        position="-30.957 -1.08489 -53.9787"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+        
+        <!-- ตู้ที่3 -->
+        <a-entity id="floor-3" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-30.957 -4.385 -49.43412" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-3" gltf-model="model/Mermaid.glb" scale="2 2 2" position="-30.957 -2.585 -49.43412" rotation="0 130 0"></a-entity>
+        <a-text id="fish-3-text" 
+        value="In folklore, a mermaid is an aquatic creature with the head and upper body of a female human and the tail of a fish.[1] Mermaids appear in the folklore of many cultures worldwide, including Europe, Asia, and Africa." 
+        color="#ffffff" 
+        position="-30.957 -0.08489 -49.43412"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่4 -->
+        <a-entity id="floor-4" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-36.66159 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-4" gltf-model="model/Eel.glb" scale="0.005 0.005 0.005" position="-36.66159 -3.085 -49.434" rotation="0 130 0"></a-entity>
+        <a-text id="fish-4-text" 
+        value="Eels are ray-finned fish belonging to the order Anguilliformes , which consists of eight suborders, 20 families, 164 genera, and about 1000 species. Eels undergo considerable development from the early larval stage to the eventual adult stage and are usually predators." 
+        color="#ffffff" 
+        position="-36.66159 -1.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่5 -->
+        <a-entity id="floor-5" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-42.43845 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-5" gltf-model="model/Shark.glb" scale="0.25 0.25 0.25" position="-42.43845 -3.085 -49.434" rotation="0 250 0"></a-entity>
+        <a-text id="fish-5-text" 
+        value="Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head. Modern sharks are classified within the clade Selachimorpha" 
+        color="#ffffff" 
+        position="-42.43845 -1.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่6 -->
+        <a-entity id="floor-6" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-56.19632 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-6" gltf-model="model/Dolphin.glb" scale="0.02 0.02 0.02" position="-56.19632 -3.085 -49.434" rotation="0 100 0"></a-entity>
+        <a-text id="fish-6-text" 
+        value="A dolphin is an aquatic mammal in the clade Odontoceti (toothed whale). Dolphins belong to the families Delphinidae (the oceanic dolphins), Platanistidae (the Indian river dolphins), Iniidae (the New World river dolphins), Pontoporiidae (the brackish dolphins), and possibly extinct Lipotidae (baiji or Chinese river dolphin). There are 40 extant species named as dolphins." 
+        color="#ffffff" 
+        position="-56.19632 -1.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่7 -->
+        <a-entity id="floor-7" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-65.22924 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-7" gltf-model="model/Whale.glb" scale="0.2 0.2 0.2" position="-65.22924 -4.085 -49.434" rotation="0 100 0"></a-entity>
+        <a-text id="fish-7-text" 
+        value="Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. As an informal and colloquial grouping, they correspond to large members of the infraorder Cetacea, i.e. all cetaceans apart from dolphins and porpoises. Dolphins and porpoises may be considered whales from a formal, cladistic perspective." 
+        color="#ffffff" 
+        position="-65.22924 -1.185 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่8 -->
+        <a-entity id="floor-8" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-70.5447 -4.385 -54.41724" rotation="0 270 0"></a-entity>
+        <a-entity id="fish-8" gltf-model="model/Magikarp.glb" scale="4 4 4" position="-70.5447 -2.885 -54.41724" rotation="270 90 0"></a-entity>
+        <a-text id="fish-8-text" 
+        value="Magikarp, known in Japan as Koiking (コイキング, Koikingu), and Gyarados (/ˈɡærədoʊs, ˈɡɪərə-, -dɒs/ GARR-ə-do(h)ss, GHEER-; ギャラドス, Gyaradosu) are a pair of Pokémon species in the Pokémon franchise. Both Pokémon first appeared in Pokémon Red and Blue, going on to appear in almost every subsequent installments in the series. Magikarp is a weak, fish-like Pokémon, who is inept and almost useless in battle, while Gyarados is the evolved form of Magikarp, boasting significant strength and power." 
+        color="#ffffff" 
+        position="-70.5447 -0.185 -54.81724"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- shellfish zone -->
+
+        <a-entity id="bg-" 
+                  gltf-model="model/Underthesea.glb" 
+                  scale="10 10 10" 
+                  position="-1 -1 -70"
+                  rotation="0 180 0"></a-entity>
+
+        <a-entity id="bg-sign" 
+                gltf-model="model/Wooden Sign.glb" 
+                scale="5 5 5" 
+                position="3.92565 -4.86145 -66.48032" 
+                rotation="0 179.9998479605043 -8.3239308476606"></a-entity>
+
+        <a-text value="Welcome to the \n Shellfish \n and \n Octopus zone" 
+                color="#ffffff" 
+                position="2.93 1 -65.48" 
+                rotation="0 0 0" 
+                align="center" 
+                scale="4 4 4"></a-text>
+
+                <a-entity id="bg" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="2.52684 -4.861 -51.61081" rotation=""></a-entity>
+
+                <a-entity id="bg-2" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="10.09123 -4.92706 -51.82662" rotation=""></a-entity>
+        
+                <a-entity id="bg-3" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-5.10872 -4.861 -51.611" rotation=""></a-entity>
+
+                <a-entity id="bg-4" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-12.30147 -4.861 -51.611" rotation=""></a-entity>
+
+                <a-entity id="bg-5" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-19.57709 -4.861 -51.611" rotation=""></a-entity>
+                
+                <a-entity id="bg-6" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="17.52828 -4.927 -51.827" rotation=""></a-entity>
+
+                <a-entity id="bg-7" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="-18.11754 -4.861 -60.23262" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-8" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="16.33881 -4.927 -60.50267" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-9" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="6.5537 -4.927 -60.503" rotation="0 90 0"></a-entity>
+                
+                <a-entity id="bg-fence" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="0.62589 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="5.56081 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="10.49193 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-4.27071 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-9.20239 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-4" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="-14.11288 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-5" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="15.40487 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-6" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-20.07929 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-7" gltf-model="model/Fence.glb" scale="1.5 2.5 2.5" position="19.49296 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="21.311 -4.635 -49.19195" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="21.31102 -4.63515 -54.32" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-9" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-23.68694 -4.623 -50.36642" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-10" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="-23.687 -4.623 -57.27903" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-11" gltf-model="model/Fence.glb" scale="3 2.5 2.5" position="21.31102 -4.63515 -59.77249" rotation="0 270 0"></a-entity>
+
+                <a-entity id="button-home2" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="-0.00827 -4.109 -51.231" camera-collision="targetPosition: 0 -2 -6"></a-entity>
+                <a-text id="button-home2-text" 
+                value="Go to Welcome" 
+                color="#ffffff" 
+                position="-0.00827 -1 -51.231"
+                align="center"
+                visible="false" 
+                look-at-camera></a-text>
+
+                <!-- ตู้ที่1 -->
+
+        <a-entity id="floor-1" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="19.043 -4.38489 -59.172" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-1" gltf-model="model/Seashell.glb" scale="0.5 0.5 0.5" position="19.043 -3.38489 -59.172" rotation="0 0 0"></a-entity>
+        <a-text id="shellfish-1-text" 
+        value="A seashell or sea shell, also known simply as a shell, is a hard, protective outer layer usually created by an animal or organism that lives in the sea. Most seashells are made by mollusks, such as snails, clams, and oysters to protect their soft insides.[1] Empty seashells are often found washed up on beaches by beachcombers. The shells are empty because the animal has died and the soft parts have decomposed or been eaten by another organism." 
+        color="#ffffff" 
+        position="19.043 -1.38489 -59.172"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่2 -->
+
+        <a-entity id="floor-2" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="19.043 -4.385 -53.9787" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-2" gltf-model="model/Clam.glb" scale="2 2 2" position="19.043 -3.58489 -53.9787" rotation=""></a-entity>
+        <a-text id="shellfish-2-text" 
+        value="Clam is a common name for several kinds of bivalve mollusc. The word is often applied only to those that are edible and live as infauna, spending most of their lives halfway buried in the sand of the sea floor or riverbeds. Clams have two shells of equal size connected by two adductor muscles and have a powerful burrowing foot.[1] They live in both freshwater and marine environments; in salt water they prefer to burrow down into the mud and the turbidity of the water required varies with species and location; the greatest diversity of these is in North America.[2]" 
+        color="#ffffff" 
+        position="19.043 -1.08489 -53.9787"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+        
+        <!-- ตู้ที่3 -->
+        <a-entity id="floor-3" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="19.043 -4.385 -49.43412" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-3" gltf-model="model/Nautilus shell.glb" scale="2 2 2" position="19.043 -2.585 -49.43412" rotation="0 130 0"></a-entity>
+        <a-text id="shellfish-3-text" 
+        value="The chambered nautilus (Nautilus pompilius), also called the pearly nautilus, is the best-known species of nautilus. The shell, when cut away, reveals a lining of lustrous nacre and displays a nearly perfect equiangular spiral, although it is not a golden spiral. The shell exhibits countershading, being light on the bottom and dark on top. This is to help avoid predators, because when seen from above, it blends in with the darkness of the sea, and when seen from below, it blends in with the light coming from above." 
+        color="#ffffff" 
+        position="19.043 -0.02489 -49.43412"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่4 -->
+        <a-entity id="floor-4" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="13.33841 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-4" gltf-model="model/Mussel Open.glb" scale="20 20 20" position="13.33841 -4.085 -49.434" rotation="0 130 0"></a-entity>
+        <a-text id="shellfish-4-text" 
+        value="Mussel (/ˈmʌsəl/) is the common name used for members of several families of bivalve molluscs, from saltwater and freshwater habitats. These groups have in common a shell whose outline is elongated and asymmetrical compared with other edible clams, which are often more or less rounded or oval." 
+        color="#ffffff" 
+        position="13.33841 -1.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+
+        <!-- ตู้ที่5 -->
+        <a-entity id="floor-6" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-6.19632 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-5" gltf-model="model/Octopus.glb" scale="0.3 0.3 0.3" position="-6.19632 -4.085 -49.434" rotation="0 100 0"></a-entity>
+        <a-text id="shellfish-5-text" 
+        value="An octopus (pl.: octopuses or octopodes[a]) is a soft-bodied, eight-limbed mollusc of the order Octopoda (/ɒkˈtɒpədə/, ok-TOP-ə-də[3]). The order consists of some 300 species and is grouped within the class Cephalopoda with squids, cuttlefish, and nautiloids. Like other cephalopods, an octopus is bilaterally symmetric with two eyes and a beaked mouth at the centre point of the eight limbs.[b] The soft body can radically alter its shape, enabling octopuses to squeeze through small gaps. They trail their eight appendages behind them as they swim." 
+        color="#ffffff" 
+        position="-6.19632 0.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่6 -->
+        <a-entity id="floor-7" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-15.22924 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-6" gltf-model="model/Squid.glb" scale="2 2 2" position="-15.22924 -2.085 -49.434" rotation="0 100 0"></a-entity>
+        <a-text id="shellfish-6-text" 
+        value="A squid (pl.: squid) is a mollusc with an elongated soft body, large eyes, eight arms, and two tentacles in the orders Myopsida, Oegopsida, and Bathyteuthida (though many other molluscs within the broader Neocoleoidea are also called squid despite not strictly fitting these criteria). Like all other cephalopods, squid have a distinct head, bilateral symmetry, and a mantle." 
+        color="#ffffff" 
+        position="-11.22924 -1.185 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่7 -->
+        <a-entity id="floor-8" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="-20.5447 -4.385 -54.41724" rotation="0 270 0"></a-entity>
+        <a-entity id="shellfish-7" gltf-model="model/Jellyfish.glb" scale="0.01 0.01 0.01" position="-20.5447 -2.085 -54.41724" rotation="0 90 0"></a-entity>
+        <a-text id="shellfish-7-text" 
+        value="Jellyfish, also known as sea jellies, are the medusa-phase of certain gelatinous members of the subphylum Medusozoa, which is a major part of the phylum Cnidaria." 
+        color="#ffffff"
+        position="-20.5447 -0.185 -54.81724"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+
+        <!-- shrimp and crab zone -->
+        <a-entity id="bg-" 
+        gltf-model="model/Underthesea.glb" 
+        scale="10 10 10" 
+        position="50 -1 -70"
+        rotation="0 180 0"></a-entity>
+
+        <a-entity id="bg-sign" 
+            gltf-model="model/Wooden Sign.glb" 
+            scale="5 5 5" 
+            position="53.92565 -4.86145 -66.48032" 
+            rotation="0 179.9998479605043 -8.3239308476606"></a-entity>
+
+        <a-text value="Welcome to the \n Shrimp \n and \n Crab zone" 
+            color="#ffffff" 
+            position="52.93 1 -65.48" 
+            rotation="0 0 0" 
+            align="center" 
+            scale="4 4 4"></a-text>
+
+            <a-entity id="bg" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="52.52684 -4.861 -51.61081" rotation=""></a-entity>
+
+            <a-entity id="bg-2" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="59.85451 -4.927 -51.827" rotation=""></a-entity>
+        
+                <a-entity id="bg-3" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="45.10872 -4.861 -51.611" rotation=""></a-entity>
+
+                <a-entity id="bg-4" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="37.69853 -4.861 -51.611" rotation=""></a-entity>
+
+                <a-entity id="bg-5" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="30.42291 -4.861 -51.611" rotation=""></a-entity>
+                
+                <a-entity id="bg-6" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="67.52828 -4.927 -51.827" rotation=""></a-entity>
+
+                <a-entity id="bg-7" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="31.88246 -4.861 -60.23262" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-8" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="66.33881 -4.927 -60.50267" rotation="0 90 0"></a-entity>
+
+                <a-entity id="bg-9" gltf-model="model/Rock Path Square Thin.glb" scale="5 5 5" position="56.5537 -4.927 -60.503" rotation="0 90 0"></a-entity>
+                
+                <a-entity id="bg-fence" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="50.62589 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="55.56081 -4.62267 -46.54825" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-2" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="60.49193 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="bg-fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="45.72929 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-3" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="40.79761 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-4" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="35.88712 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-5" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="65.40487 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-6" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="29.92071 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-7" gltf-model="model/Fence.glb" scale="1.5 2.5 2.5" position="69.49296 -4.623 -46.548" rotation="0 180 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="71.311 -4.635 -49.19195" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-8" gltf-model="model/Fence.glb" scale="2.5 2.5 2.5" position="71.31102 -4.63515 -54.32" rotation="0 270 0"></a-entity>
+
+                <a-entity id="fence-9" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="26.31306 -4.623 -50.36642" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-10" gltf-model="model/Fence.glb" scale="3.5 2.5 2.5" position="26.313 -4.623 -57.27903" rotation="0 90 0"></a-entity>
+
+                <a-entity id="fence-11" gltf-model="model/Fence.glb" scale="3 2.5 2.5" position="71.31102 -4.63515 -59.77249" rotation="0 270 0"></a-entity>
+
+                <a-entity id="button-home3" gltf-model="model/Button.glb" scale="0.25 0.25 0.25" position="50.00827 -4.109 -51.231" camera-collision="targetPosition: 0 -2 -6"></a-entity>
+                <a-text id="button-home3-text" 
+                value="Go to Welcome" 
+                color="#ffffff" 
+                position="50.00827 -1 -51.231"
+                align="center"
+                visible="false" 
+                look-at-camera></a-text>
+
+                <!-- ตู้ที่1 -->
+
+        <a-entity id="floor-1" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="69.043 -4.38489 -59.172" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-1" gltf-model="model/Shrimp.glb" scale="0.05 0.05 0.05" position="69.043 -3.38489 -59.172" rotation="0 0 0"></a-entity>
+        <a-text id="Shrimp-1-text" 
+        value="A shrimp (pl.: shrimp (US) or shrimps (UK)) is a crustacean (a form of shellfish) with an elongated body and a primarily swimming mode of locomotion – typically belonging to the Caridea or Dendrobranchiata of the order Decapoda, although some crustaceans outside of this order are also referred to as "shrimp"." 
+        color="#ffffff" 
+        position="69.043 -1.38489 -59.172"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่2 -->
+
+        <a-entity id="floor-2" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="69.043 -4.385 -53.9787" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-2" gltf-model="model/Crayfish.glb" scale="0.05 0.05 0.05" position="69.043 -3.58489 -53.9787" rotation=""></a-entity>
+        <a-text id="Shrimp-2-text" 
+        value="Crayfish[a] are freshwater crustaceans belonging to the infraorder Astacidea, which also contains lobsters. Taxonomically, they are members of the superfamilies Astacoidea and Parastacoidea. They breathe through feather-like gills. Some species are found in brooks and streams, where fresh water is running, while others thrive in swamps, ditches, and paddy fields. Most crayfish cannot tolerate polluted water, although some species, such as Procambarus clarkii, are hardier. Crayfish feed on animals and plants, either living or decomposing, and detritus.[1]" 
+        color="#ffffff" 
+        position="69.043 -1.08489 -53.9787"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+        
+        <!-- ตู้ที่3 -->
+        <a-entity id="floor-3" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="69.043 -4.385 -49.43412" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-3" gltf-model="model/lobster.glb" scale="2 2 2" position="69.043 -2.585 -49.43412" rotation="0 130 0"></a-entity>
+        <a-text id="Shrimp-3-text" 
+        value="Lobsters are malacostracans of the family Nephropidae[1] or its synonym Homaridae.[2] They have long bodies with muscular tails and live in crevices or burrows on the sea floor. Three of their five pairs of legs have claws, including the first pair, which are usually much larger than the others. Highly prized as seafood, lobsters are economically important and are often one of the most profitable commodities in the coastal areas they populate.[3]" 
+        color="#ffffff" 
+        position="69.043 -0.02489 -49.43412"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่4 -->
+        <a-entity id="floor-4" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="63.33841 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-4" gltf-model="model/lobster2.glb" scale="0.15 0.15 0.15" position="63.33841 -3.585 -49.434" rotation="0 130 0"></a-entity>
+        <a-text id="Shrimp-4-text" 
+        value="Spiny lobsters, also known as langustas, langouste, or rock lobsters, are a family (Palinuridae) of about 60 species of achelate crustaceans, in the Decapoda Reptantia. Spiny lobsters are also, especially in Australia, New Zealand, Ireland, South Africa, and the Bahamas, called crayfish, sea crayfish, or crawfish (kreef in South Africa), terms which elsewhere are reserved for freshwater crayfish.[1]"
+        color="#ffffff."
+        position="63.33841 -0.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+
+        <!-- ตู้ที่5 -->
+        <a-entity id="floor-6" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="43.80368 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-5" gltf-model="model/crab (1).glb" scale="0.03 0.03 0.03" position="43.80368 -3.085 -49.434" rotation="0 120 0"></a-entity>
+        <a-text id="Shrimp-5-text" 
+        value="Soft-shell crab is a culinary term for crabs that have recently molted their old exoskeleton and are still soft.[1] Soft-shells are removed from the water as soon as they molt or, preferably, just before to prevent any hardening of their shell.[2] Catching soft-shell crab is very time-sensitive and requires that any caught crabs be kept in climate-controlled areas immediately after catching until they molt, at which point they can be safely removed and sold.[3]" 
+        color="#ffffff" 
+        position="43.80368 -1.385 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่6 -->
+        <a-entity id="floor-7" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="34.77076 -4.385 -49.434" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-6" gltf-model="model/Feeling Crabby.glb" scale="5 5 5 " position="34.77076 -3.785 -49.434" rotation="0 100 0"></a-entity>
+        <a-text id="Shrimp-6-text" 
+        value="King crabs are decapod crustaceans of the family Lithodidae[b] that are chiefly found in deep waters and are adapted to cold environments.[2][3] They are composed of two subfamilies: Lithodinae, which tend to inhabit deep waters, are globally distributed, and comprise the majority of the family's species diversity;[3][4] and Hapalogastrinae, which are endemic to the North Pacific and inhabit exclusively shallow waters." 
+        color="#ffffff" 
+        position="34.77076 -1.185 -49.434"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <!-- ตู้ที่7 -->
+        <a-entity id="floor-8" gltf-model="model/Floor.glb" scale="1.5 1.5 1.5" position="29.4553 -4.385 -54.41724" rotation="0 270 0"></a-entity>
+        <a-entity id="Shrimp-7" gltf-model="model/Crabsticks.glb" scale="2 2 2" position="29.4553 -4.085 -54.41724" rotation="0 90 0"></a-entity>
+        <a-text id="Shrimp-7-text" 
+        value="Crab sticks, krab sticks, snow legs, imitation crab meat, or seafood sticks are a Japanese seafood product made of surimi (pulverized white fish) and starch, then shaped and cured to resemble the leg meat of snow crab or Japanese spider crab.[1] It is a product that uses fish meat to imitate shellfish meat." 
+        color="#ffffff"
+        position="29.4553 -2.185 -54.81724"
+        align="center" 
+        visible="false" 
+        look-at-camera></a-text>
+
+        <a-plane position="0 0 -39.63578" rotation="-3.7127665124477343 -0.3724225668350351 -179.91333133343954" width="4" height="4" color="#0077be" material="" geometry="" scale="100 100 1"></a-plane>
+
+        <a-sound 
+      src="./model/Ocean of Jazz [ ezmp3.cc ].mp3"
+      autoplay="true" 
+      loop="true" 
+      volume="0.5"
+      position="0 0 0">
+  </a-sound>
+
+  <!-- ตกแต่ง -->
+  <a-entity id="ship" gltf-model="./model/Ship Wreck.glb" scale="" position="-4.4157 19.87978 115.76483" rotation="-2.608676841230638 83.1556566385169 -20.76742824231182"></a-entity>
+  <a-entity id="fish-1" 
+              gltf-model="model/Fish.glb" 
+              scale="0.5 0.5 0.5" 
+              position="100 -1 4" 
+              rotation="0 270 0"
+              animation__move="property: position; to:  -100 -1 4; dur: 10000; easing: easeInOutSine; loop: true; dir: alternate;">
+    </a-entity>
+
+    <a-entity id="fish-1" 
+              gltf-model="model/Fish.glb" 
+              scale="0.5 0.5 0.5" 
+              position="100 0 9" 
+              rotation="0 0 0"
+              animation__move="property: position; to:  -100 -1 60; dur: 10000; easing: easeInOutSine; loop: true; dir: alternate;">
+    </a-entity>
+
+
+
+
+
+
+
+
+
+        <!-- กล้องและเคอร์เซอร์ -->
+        <a-camera id="camera" position="0 -2 -6">
+            <a-cursor color="#ffffff"></a-cursor>
+        </a-camera>
+    </a-scene>
+
+    <script>
+AFRAME.registerComponent('look-at-camera', {
+    tick: function () {
+        const camera = document.querySelector('#camera');
+        if (camera) {
+            this.el.object3D.lookAt(camera.object3D.position);
+        }
+    }
+});
+
+// ฟังก์ชันสำหรับแสดงคำอธิบายเมื่อผู้ใช้เลื่อนเมาส์เข้าและออก
+function showDescription(entityId, textId) {
+    const entity = document.querySelector(entityId);
+    const text = document.querySelector(textId);
+
+    entity.addEventListener('mouseenter', () => {
+        text.setAttribute('visible', 'true');
+        
+        // เริ่มหมุนโมเดลช้าเมื่อเมาส์เข้า
+        entity.setAttribute('animation', {
+            property: 'rotation',
+            to: '0 360 0', // หมุนรอบแกน Y
+            dur: 10000, // หมุนเต็ม 360 องศาใน 10 วินาที
+            loop: true, // ทำให้หมุนต่อเนื่อง
+            easing: 'linear' // ความเร็วคงที่
+        });
+    });
+
+    entity.addEventListener('mouseleave', () => {
+        text.setAttribute('visible', 'false');
+        
+        // หยุดการหมุนเมื่อเมาส์ออก
+        entity.setAttribute('animation', {
+            property: 'rotation',
+            to: entity.getAttribute('rotation'), // คืนค่า rotation เดิม
+            dur: 500, // ใช้เวลา 0.5 วินาทีในการหยุด
+            easing: 'linear'
+        });
+    });
+
+    // เมื่อคลิกปุ่ม ย้ายกล้องไปยังเป้าหมาย
+    entity.addEventListener('click', () => {
+        const camera = document.querySelector('#camera');
+        const targetPosition = entity.getAttribute('camera-collision').targetPosition;
+
+        // สร้างการย้ายกล้องใหม่ทุกครั้งที่คลิก
+        camera.setAttribute('animation__position', {
+            property: 'position',
+            to: `${targetPosition.x} ${targetPosition.y} ${targetPosition.z}`,
+            dur: 1000 // ย้ายในเวลา 1 วินาที
+        });
+
+        // เพิ่มการย้ายกล้องใหม่อีกครั้ง (รีเซ็ต)
+        setTimeout(() => {
+            camera.removeAttribute('animation__position');
+        }, 1000); // รอให้การย้ายเสร็จสิ้นแล้วจึงลบแอนิเมชัน
+    });
+}
+
+
+// เรียกใช้ฟังก์ชันสำหรับแต่ละปุ่ม
+showDescription('#button-1', '#button-1-text');
+showDescription('#button-2', '#button-2-text');
+showDescription('#button-3', '#button-3-text');
+
+showDescription('#button-home', '#button-home-text');
+showDescription('#button-home2', '#button-home2-text');
+showDescription('#button-home3', '#button-home3-text');
+
+showDescription('#fish-1', '#fish-1-text');
+showDescription('#fish-2', '#fish-2-text');
+showDescription('#fish-3', '#fish-3-text');
+showDescription('#fish-4', '#fish-4-text');
+showDescription('#fish-5', '#fish-5-text');
+showDescription('#fish-6', '#fish-6-text');
+showDescription('#fish-7', '#fish-7-text');
+showDescription('#fish-8', '#fish-8-text');
+
+showDescription('#shellfish-1', '#shellfish-1-text');
+showDescription('#shellfish-2', '#shellfish-2-text');
+showDescription('#shellfish-3', '#shellfish-3-text');
+showDescription('#shellfish-4', '#shellfish-4-text');
+showDescription('#shellfish-5', '#shellfish-5-text');
+showDescription('#shellfish-6', '#shellfish-6-text');
+showDescription('#shellfish-7', '#shellfish-7-text');
+
+showDescription('#Shrimp-1', '#Shrimp-1-text');
+showDescription('#Shrimp-2', '#Shrimp-2-text');
+showDescription('#Shrimp-3', '#Shrimp-3-text');
+showDescription('#Shrimp-4', '#Shrimp-4-text');
+showDescription('#Shrimp-5', '#Shrimp-5-text');
+showDescription('#Shrimp-6', '#Shrimp-6-text');
+showDescription('#Shrimp-7', '#Shrimp-7-text');
+
+
+// สร้าง custom component สำหรับตรวจจับการชนกับกล้อง
+AFRAME.registerComponent('camera-collision', {
+    schema: {
+        targetPosition: { type: 'vec3' } // ตำแหน่งที่กล้องจะย้ายไป
+    },
+    init: function () {
+        this.hasMoved = false; // ตัวแปรสถานะเพื่อป้องกันการย้ายซ้ำ
+    },
+    tick: function () {
+        const camera = document.querySelector('#camera');
+        const cameraPos = camera.object3D.position;
+        const zonePos = this.el.object3D.position;
+
+        const distance = cameraPos.distanceTo(zonePos);
+
+        // ตรวจสอบระยะห่าง และย้ายกล้องเมื่อยังไม่เคยย้าย
+        if (distance < 1.5 && !this.hasMoved) {
+            this.hasMoved = true; // ตั้งสถานะเพื่อป้องกันการย้ายซ้ำ
+            camera.setAttribute('animation', {
+                property: 'position',
+                to: `${this.data.targetPosition.x} ${this.data.targetPosition.y} ${this.data.targetPosition.z}`,
+                dur: 1000 // ย้ายในเวลา 1 วินาที
+            });
+        }
+    }
+});
+</script>
+
+</body>
+</html>
