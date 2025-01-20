@@ -49,10 +49,6 @@
             <a-cursor color="#ffffff"></a-cursor>
         </a-camera>
 
-        <!-- แสง -->
-        <a-entity light="color: #BBB; type: ambient"></a-entity>
-        <a-entity light="intensity: 0.6; castShadow: true" position="-0.5 1 1"></a-entity>
-
         <a-sound 
       src="model/SPD - สวัสดีค้าบ【SAWAS D KAB】_ OFFICIAL MV [ ezmp3.cc ].mp3"
       autoplay="true" 
@@ -75,6 +71,11 @@
             window.location.href = this.data.targetUrl;
         });
     }
+});
+        const soundEntity = document.querySelector('[sound]');
+soundEntity.addEventListener('sound-loaded', () => {
+  console.log('Sound loaded!');
+  soundEntity.components.sound.playSound();
 });
     </script>
 </body>
