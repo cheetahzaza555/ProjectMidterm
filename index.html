@@ -50,8 +50,8 @@
         </a-camera>
 
 
-        <a-entity sound="src: url('model/SPD - สวัสดีค้าบ【SAWAS D KAB】_ OFFICIAL MV [ ezmp3.cc ].mp3'); autoplay: false"></a-entity>
-<a-entity id="play-button" geometry="primitive: plane" material="color: green">
+<a-entity sound="src: url('./model/SPD - สวัสดีค้าบ【SAWAS D KAB】_ OFFICIAL MV [ ezmp3.cc ].mp3'); autoplay: true; loop: true;">
+</a-entity>
 
     </a-scene>
 
@@ -68,16 +68,6 @@
         });
     }
 });
-        const soundEntity = document.querySelector('[sound]');
-soundEntity.addEventListener('sound-loaded', () => {
-  console.log('Sound loaded!');
-  soundEntity.components.sound.playSound();
-});
-
-         document.querySelector('#play-button').addEventListener('click', () => {
-      const sound = document.querySelector('[sound]');
-      sound.components.sound.playSound();
-    });
     </script>
 </body>
 </html>
